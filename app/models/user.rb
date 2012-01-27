@@ -12,6 +12,7 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email
 
+  # this accepts single-digit domain suffix
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name, :presence => true,
